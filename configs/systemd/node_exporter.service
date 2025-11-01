@@ -1,0 +1,17 @@
+[Unit]
+Description=Node Exporter
+Documentation=https://github.com/prometheus/node_exporter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/node_exporter \
+    --collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,38 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'jenkins-monitoring'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node_exporter_monitoring_server'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9100']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'monitoring-server'
+
+  - job_name: 'node_exporter_jenkins_server'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['<JENKINS_PRIVATE_IP>:9100']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'jenkins-server'
+
+  - job_name: 'jenkins_metrics'
+    metrics_path: '/prometheus'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['<JENKINS_PRIVATE_IP>:8080']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'jenkins-application'

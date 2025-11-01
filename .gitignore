@@ -1,0 +1,57 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Editor files
+.vscode/
+.idea/
+*.code-workspace
+.vs/
+
+# Prometheus data
+data/
+prometheus-data/
+/var/lib/prometheus/
+
+# Grafana data
+grafana.db
+*.db
+grafana/data/
+
+# Logs
+*.log
+logs/
+/var/log/
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# Sensitive files
+*.pem
+*.key
+*.pub
+secrets/
+.env
+.env.local
+
+# Archives and downloads
+*.tar.gz
+*.zip
+*.tgz
+
+# Node modules (if any JS tools)
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# Backup files
+*.bak
+*~
