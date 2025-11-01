@@ -15,4 +15,4 @@
 - 20GB EBS storage per instance
 - SSH key pair for access
 
-## Complete installation steps available in main README.md
+
