@@ -1,0 +1,39 @@
+GitHub Push Instructions
+========================
+
+Repository: https://github.com/akanksha106-code/Grafana-prometheus.git
+Username: akanksha106-code
+
+Step 1: Add your screenshots
+-----------------------------
+cd screenshots/
+# Copy your screenshot files here
+
+Step 2: Update personal info in README.md
+------------------------------------------
+- Add your LinkedIn URL
+- Add your email address
+- Add your portfolio website (optional)
+
+Step 3: Push to GitHub
+----------------------
+git push -u origin main
+
+When prompted for credentials:
+- Username: akanksha106-code
+- Password: [Use your Personal Access Token, NOT your GitHub password]
+
+Get Personal Access Token:
+https://github.com/settings/tokens
+- Click "Generate new token (classic)"
+- Select "repo" scope
+- Copy the token
+
+Step 4: After pushing
+---------------------
+1. Go to: https://github.com/akanksha106-code/Grafana-prometheus
+2. Add repository topics: devops, prometheus, grafana, jenkins, aws, monitoring
+3. Update repository description
+4. Star your own repo!
+
+Need help? Check the detailed guide in the parent directory.
